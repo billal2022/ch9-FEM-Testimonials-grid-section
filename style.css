@@ -1,0 +1,126 @@
+:root{
+    
+--Moderate-violet: hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+
+--Light-gray: hsl(0, 0%, 75%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+
+--ff: 'Barlow Semi Condensed', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: var(--Light-grayish-blue);
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+font-size: 12px;
+font-family: var(--ff);
+}
+.main-box{
+    display: grid;
+    grid: auto/1fr 1fr 1fr 1fr;
+    
+    width: 1010px;
+    height: 70%;
+    place-content: cenetr;  
+    gap: 23px;
+}
+.boxes{
+    box-shadow: 20px 20px 20px 0px rgba(0, 0, 0, 0.053);
+    border-radius: 6px;
+    padding: 30px;
+    display: grid;
+    gap: 10px;
+    
+}
+.flex-group{
+    display: flex;
+    align-items: center;
+}
+.images{
+    width: 30px;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+.name{
+    color: var(--Light-grayish-blue);
+}
+.disc{
+    color: var(--Light-gray);
+}
+h3{
+    color: var(--Light-grayish-blue);
+}
+p{
+    color: var(--Light-gray);
+}
+/* daniel*/
+.boxes:nth-child(1){
+    background-color: var(--Moderate-violet);
+    grid-column: span 2;
+    order: 1;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+/*jhonathon*/
+.boxes:nth-child(2){
+    background-color: var(--Very-dark-grayish-blue);
+    order: 2;
+}
+/*jenete*/
+.boxes:nth-child(3){
+background-color: var(--White);
+order: 4;
+}
+.boxes:nth-child(4){
+    background-color: var(--Very-dark-blackish-blue);
+    grid-column: span 2;
+    order: 5;
+}
+.boxes:nth-child(5){
+    background-color: var(--White);
+    grid-row: span 2;
+    order: 3;
+}
+.boxes:nth-child(5) .name,.boxes:nth-child(3) .name{
+color: var(--Very-dark-grayish-blue);
+}
+.boxes:nth-child(5) h3,.boxes:nth-child(3) h3{
+    color: var(--Very-dark-grayish-blue);
+    }
+
+.boxes:nth-child(1)::after{
+    font-family: sans-ser;
+    color: white;
+    opacity: 0.3;
+    font-family: sans-serif;
+    content: "“";
+    font-size: 376px;
+    position: absolute;
+    right: 55px;
+    top: -71px;
+}
+
+@media (max-width:600px){
+    .main-box{
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+    }
+    body{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+  .boxes:nth-child(5){
+    order: 5;
+  }
+}
